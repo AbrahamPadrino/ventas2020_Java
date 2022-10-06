@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5e4d5dad-a4c4-4a40-a202-a8b8f13b72ec">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tablareport" class="java.lang.String"/>
+	<parameter name="importe" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="descuento" class="java.lang.String"/>
+	<parameter name="importetotal" class="java.lang.String"/>
+	<parameter name="cliente" class="java.lang.String"/>
+	<parameter name="documento" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="3" width="149" height="20" uuid="5d6927e2-0b76-46b2-9779-e3b8adf068d6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SYSTEVENT 2020]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="23" width="149" height="20" uuid="882ab76b-98ca-4b2d-893a-baf5555eefd5"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Av. Colonial - 265 - Capitál]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="33" width="149" height="20" uuid="9c55b6ba-ee4a-4804-803c-51ac786ea405"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[R.U.C J-092456785]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="43" width="140" height="20" uuid="378456f1-3457-48ef-be45-e1be112188cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[BOLETA ELECTRÓNICA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="173" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="56" width="198" height="117" uuid="77b6b9b3-d7fe-4334-8810-2763f8fe7509"/>
+				<textFieldExpression><![CDATA[$P{tablareport}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="32" height="16" uuid="73ff493f-2701-4856-91a7-18a3d0e39a2f"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Cant.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="39" width="63" height="16" uuid="e1aea950-11cf-476f-a375-2f017cc1cf0a"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Descripción.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="39" width="37" height="16" uuid="cbe6b809-babb-4723-9703-bf36087f5ff0"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Mont.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="161" height="20" uuid="843d12b4-b034-41c3-b5ca-7bbb86696414"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="10" width="116" height="20" uuid="48d2558f-6cf5-4172-9ca7-e2ca21a78303"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{documento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="53" height="20" uuid="d6eb3742-054d-41b5-9538-e762732a8011"/>
+				<textElement>
+					<font fontName="Arial" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="74">
+			<textField>
+				<reportElement x="116" y="32" width="72" height="20" uuid="46f15226-5a99-4c43-81e0-6945f6cb3cd9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{importe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="42" width="72" height="20" uuid="630937d9-9517-4104-84f3-f6a57cc235ec"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{descuento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="52" width="72" height="20" uuid="c876c371-f641-45a8-bad4-2b2a5f37f460"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial Black"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{importetotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="53" y="32" width="63" height="20" uuid="2e24e7b8-246f-426f-a62d-5b2b42e3997d"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Sub-Total:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="42" width="63" height="20" uuid="c2494718-fd78-4cad-b676-b3adcdc08c9a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Descuento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="52" width="63" height="20" uuid="fce7a80c-44d4-40b1-9aaf-26313a0630a1"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

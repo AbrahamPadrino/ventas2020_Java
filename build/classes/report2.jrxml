@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3f44127d-9aad-4ea0-aeab-1c2431950194">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tabla_ventas" class="java.lang.String"/>
+	<parameter name="n_ventas" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="165" height="20" uuid="5ec6f7cc-361b-4490-8c6b-472bf464078a"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[VENTAS REALIZADAS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="415" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="54" height="20" uuid="bc7a3883-4884-462d-b7d0-d1a1e7c8524b"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Nº Ventas:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="56" height="20" uuid="c8176500-a173-460f-b5cc-ebd23e6a3761"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Fecha Act:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="54" y="0" width="36" height="20" uuid="3df9084f-94b2-4b7c-b4d9-3d32777ed158"/>
+				<textFieldExpression><![CDATA[$P{n_ventas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="0" width="66" height="20" uuid="a5a9ef88-dbff-46f1-a8ee-bb8abcd64613"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="212" height="1" uuid="8c3794df-8aec-412c-b5ad-3521247ac9ed"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="21" width="212" height="377" uuid="a62dc943-7701-4f78-8288-080449aaf278"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$P{tabla_ventas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
